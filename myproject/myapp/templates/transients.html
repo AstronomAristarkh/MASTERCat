@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>{{ phrase }}</h1>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <table>
+        <tbody>
+                <td>Name</td>
+                <td>Transient_type</td>
+                <td>DataTime</td>
+                <td>Ra</td>
+                <td>Dec</td>
+                <td>Max_limit</td>
+                <td>Max_magnitude</td>
+                <td>Telescope</td>
+                <td>satellite</td>
+        {% for observation in observations %}
+            <tr data-href="{% url 'transient' observation.id %}">
+                <td>{{observation.name}}</td>
+                <td>{{observation.transient_type}}</td>
+                <td>{{observation.DataTime}}</td>
+                <td>{{observation.Ra}}</td>
+                <td>{{observation.Dec}}</td>
+                <td>{{observation.Max_limit}}</td>
+                <td>{{observation.Max_magnitude}}</td>
+                <td>{{observation.telescope}}</td>
+                <td>{{observation.satellite}}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <script>
+        $(document).ready(function($) {
+            $('*[data-href]').on('click', function() {
+                window.location = $(this).data("href");
+            });
+        });
+    </script>
+{% endblock %}

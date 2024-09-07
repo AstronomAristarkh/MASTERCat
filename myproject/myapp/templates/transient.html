@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block content %}
+    <table>
+        <tr>
+            <td>id</td> 
+            <td>{{ observation.id }}</td>
+        </tr>
+        <tr>
+            <td>Name</td> 
+            <td>{{ observation.name }}</td>
+        </tr>
+        <tr>
+            <td>Transient_type</td> 
+            <td>{{ observation.transient_type }}</td>
+        </tr>
+        <tr>
+            <td>Obs_or_lim</td>
+            <td>{{ observation.obs_or_lim }}</td>
+        </tr>
+        <tr>
+            <td>DataTime</td>
+            <td><time>{{ observation.DataTime }}</time></td>
+        </tr>
+        <tr>
+            <td>Ra</td>
+            <td>{{ observation.Ra }}</td>
+        </tr>
+        <tr>
+            <td>Dec</td>
+            <td>{{ observation.Dec }}</td>
+        </tr>
+        <tr>
+            <td>Max_limit</td>
+            <td>{{ observation.max_limit }}</td>
+        </tr>
+        <tr>
+            <td>Max_magnitude</td>
+            <td>{{ observation.max_magnitude }}</td>
+        </tr>
+        <tr>
+            <td>Lightcurve</td>
+            <td>{{ observation.lightcurve }}</td>
+        </tr>
+        <tr>
+            <td>Pictures</td>
+            <td>{{ observation.pictures }}</td>
+        </tr>
+        <tr>
+            <td>Telescope</td>
+            <td>{{ observation.telescope }}</td>
+        </tr>
+        <tr>
+            <td>Publication</td>
+            <td>{{ observation.publication }}</td>
+        </tr>
+        <tr>
+            <td>observation.if_we_first</td>
+            <td>{{ observation.if_we_first }}</td>
+        </tr>
+        <tr>
+            <td>observation.time_from_notice</td>
+            <td>{{ observation.time_from_notice}}</td>
+        </tr>
+        <tr>
+            <td>observation.sattelite</td>
+            <td>{{ observation.sattelite }}</td>
+        </tr>
+    </table>
+{% endblock %}

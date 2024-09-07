@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>   
+    <head>
+        <title>{% block title %}Сайт{% endblock %}</title>
+        {% block css %}
+        <link rel="stylesheet" href='style.css'>
+        {% endblock %}
+    </head>
+    <body>
+        <sel1>{% block content %}
+            <p>Скоро тут появится текст...</p>
+        {% endblock %}</sel1>
+    </body>
+</html>
+
+<style>
+    html {
+        font-size: 15px; /* px значит 'пиксели': базовый шрифт будет 10 пикселей в 
+        высоту */
+        font-family: 'Roboto', sans-serif;
+        background-image: url("map_mx_apr.jpg");
+        height: 100%;
+    }        
+    sel1{
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        
+    }
+    a.button1 {
+        font-size: 16px;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+        padding: 16px 32px;
+        border-radius: 23px;
+        background: rgb(89, 64, 199);
+        box-shadow: 0 0px rgb(89, 64, 199) inset;
+        transition: 0.5s;
+        margin-top: 300px; /* отступ сверху */
+        margin-bottom: 55px; /* отступ снизу */
+        margin: auto;
+    } 
+    a.button1:hover { background: rgb(14, 3, 60); 
+        box-shadow: 0 0px rgb(14, 3, 60) inset}
+    a.button1:active {
+        background: rgb(0, 1, 42);
+        box-shadow: 0 0px rgb(0, 1, 42) inset;
+    }
+    table {
+            width: 40%;
+            border-collapse: collapse;
+            position: relative;
+            margin: auto;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #689ebf;
+        }
+
+        tr:nth-child(even) {
+            background-color: #689ebf;
+        }
+
+        tr:hover {
+            background-color: #2391a9;
+        }
+</style>
