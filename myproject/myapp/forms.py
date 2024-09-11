@@ -37,3 +37,8 @@ class ContactForm(forms.Form):
     from_email = forms.EmailField(label='Ваш email', required=True)
     subject = forms.CharField(label='Тема', required=True)
     message = forms.CharField(label='Сообщение', widget=forms.Textarea, required=True)
+
+class Spinar(forms.Form):
+    m = forms.FloatField()
+    ao = forms.FloatField()
+    am = forms.FloatField()

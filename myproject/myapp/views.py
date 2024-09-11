@@ -1,9 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from .models import Observation
-from .forms import UserForm, UserRequest, ContactForm
+from .forms import UserForm, UserRequest, ContactForm, Spinar
 from django.core.mail import send_mail, BadHeaderError
 from myproject.settings import RECIPIENTS_EMAIL, DEFAULT_FROM_EMAIL
+from .radius import counting
 
 #import logging
 
@@ -142,3 +143,18 @@ def send(request):
 
 def success_view(request):
     return HttpResponse('Приняли! Спасибо за вашу заявку.')
+
+def spinar(request):
+    if request.method == 'POST':
+        form = Spinar(request.POST)
+        if form.is_valid():
+            m = form.cleaned_data['m']
+            ao = form.cleaned_data['ao']
+            am = form.cleaned_data['am']
+            data = counting(m, ao, am)
+            return render(request, "spinar.html", {'data': data})
+    else:
+        form = Spinar()
+    return render(request, 'edit.html', {'form':form})
+
+

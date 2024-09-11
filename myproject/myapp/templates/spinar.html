@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<table>
+    <td>Безразмерное время</td>
+    <td>Логарифм светимости (в единицах планковской)</td>
+    {% for k in data %}
+        <tr>
+            {% for i in k %}
+                <td>{{ i }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}
