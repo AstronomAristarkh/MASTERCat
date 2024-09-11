@@ -5,12 +5,23 @@
         {% block css %}
         <link rel="stylesheet" href='style.css'>
         {% endblock %}
+
     </head>
+    <header>
+        Лаборатория космического мониторинга ГАИШ МГУ
+    </header>
     <body>
         <sel1>{% block content %}
             <p>Скоро тут появится текст...</p>
         {% endblock %}</sel1>
     </body>
+    <footer>
+        <a href="http://observ.pereplet.ru/">Лаборатория космического мониторинга</a>&emsp;          
+        <a href="https://master.sai.msu.ru/site/master2/alert.php">Алертные наблюдения на МАСТЕРе</a>&emsp;
+        <a href="https://master.sai.msu.ru/masternet/">"ЦУП" МАСТЕРа</a>&emsp;
+        <a href="https://gcn.nasa.gov/circulars">Телеграммы GCN</a>&emsp;
+        <a href="/send/">Обратная связь</a>&emsp;
+    </footer>
 </html>
 
 <style>
@@ -18,7 +29,7 @@
         font-size: 15px; /* px значит 'пиксели': базовый шрифт будет 10 пикселей в 
         высоту */
         font-family: 'Roboto', sans-serif;
-        background-image: url("map_mx_apr.jpg");
+        background-image: "map_mx_apr.jpg";
         height: 100%;
     }        
     sel1{
@@ -71,4 +82,30 @@
         tr:hover {
             background-color: #2391a9;
         }
+    body {
+        width: 600px;
+        height: 100%;
+        margin: 0 auto;
+        background-color: #e6eefb;
+        border: 0px solid rgb(175, 152, 152);
+    }
+    header {    
+        color: #0b0505;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 28px;
+        background: #3789c8;
+
+    }
+    footer {
+        padding: 10px 20px;
+        background: #8cb3d1;
+        color: white;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+      }
 </style>

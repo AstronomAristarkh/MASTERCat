@@ -147,4 +147,7 @@ LOGGING = {
     },
     },
 }
+RECIPIENTS_EMAIL = ['chasovnikov.ar17@physics.msu.ru']   # замените на свою почту
+DEFAULT_FROM_EMAIL = 'chasovnikov.ar17@physics.msu.ru'  # замените на свою почту
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 

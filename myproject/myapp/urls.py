@@ -9,4 +9,6 @@ urlpatterns = [
  path('transient/<int:number>/', views.transient, name='transient'),
  path('edit/', views.edit, name='edit'),
  path('ok/', views.ok, name='ok'),
+ path('send/', views.send, name='send'),
+ path('oke/', views.oke, name='oke'),
 ]

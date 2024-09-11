@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from .models import Observation
-from .forms import UserForm, UserRequest
+from .forms import UserForm, UserRequest, ContactForm
+from django.core.mail import send_mail, BadHeaderError
+from myproject.settings import RECIPIENTS_EMAIL, DEFAULT_FROM_EMAIL
 
 #import logging
 
@@ -111,6 +113,32 @@ def statistic(request):
 def ok(request):
     return HttpResponse("Объект успешно добавлен!")
 
+def oke(request):
+    return HttpResponse("Запрос отправлен.")
+
 def index(request):
     return render(request, 'index.html')
 
+def send(request):
+    # если метод GET, вернем форму
+    if request.method == 'GET':
+        form = ContactForm()
+    elif request.method == 'POST':
+        # если метод POST, проверим форму и отправим письмо
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            from_email = form.cleaned_data['from_email']
+            message = form.cleaned_data['message']
+            try:
+                send_mail(f'{subject} от {from_email}', message,
+                          DEFAULT_FROM_EMAIL, RECIPIENTS_EMAIL)
+            except BadHeaderError:
+                return HttpResponse('Ошибка в теме письма.')
+            return redirect('oke')
+    else:
+        return HttpResponse('Неверный запрос.')
+    return render(request, "send.html", {'form': form})
+
+def success_view(request):
+    return HttpResponse('Приняли! Спасибо за вашу заявку.')

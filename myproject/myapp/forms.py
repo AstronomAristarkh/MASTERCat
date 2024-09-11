@@ -28,3 +28,12 @@ class UserRequest(forms.Form):
     if_we_first = forms.ChoiceField(choices=[(True, 'yes'), (False, 'no'), ('m', 'does not matter')])
     satellite = forms.CharField(required=False)
     discoverer = forms.CharField(max_length = 30, required=False)
+
+class UserName(forms.Form):
+    username = forms.CharField(max_length = 20)
+    password = forms.CharField(max_length = 20)
+
+class ContactForm(forms.Form):
+    from_email = forms.EmailField(label='Ваш email', required=True)
+    subject = forms.CharField(label='Тема', required=True)
+    message = forms.CharField(label='Сообщение', widget=forms.Textarea, required=True)

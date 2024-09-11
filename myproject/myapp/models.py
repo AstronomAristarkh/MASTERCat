@@ -19,3 +19,7 @@ class Observation(models.Model):
     satellite = models.CharField(max_length = 30, default = 'MASTER')
     discoverer = models.CharField(max_length = 30, default = 'Lipunov V. M.')
 
+class Person(models.Model):
+    username = models.CharField(max_length = 20)
+    password = models.CharField(max_length = 20)
+
