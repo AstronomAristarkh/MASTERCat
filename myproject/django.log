@@ -720,3 +720,135 @@ Not Found: /spinar/style.css
 "POST /spinar/ HTTP/1.1" 200 110399
 Not Found: /spinar/style.css
 "GET /spinar/style.css HTTP/1.1" 404 3658
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 3190
+Not Found: /style.css
+"GET /style.css HTTP/1.1" 404 3637
+"GET / HTTP/1.1" 200 3190
+Not Found: /style.css
+"GET /style.css HTTP/1.1" 404 3637
+"GET /transients/ HTTP/1.1" 200 8131
+Not Found: /transients/style.css
+"GET /transients/style.css HTTP/1.1" 404 3670
+"GET / HTTP/1.1" 200 3190
+Not Found: /style.css
+"GET /style.css HTTP/1.1" 404 3637
+"GET /edit/ HTTP/1.1" 200 5592
+Not Found: /edit/style.css
+"GET /edit/style.css HTTP/1.1" 404 3652
+"GET / HTTP/1.1" 200 3190
+Not Found: /style.css
+"GET /style.css HTTP/1.1" 404 3637
+"GET /statistic/ HTTP/1.1" 200 4599
+Not Found: /statistic/style.css
+"GET /statistic/style.css HTTP/1.1" 404 3667
+"GET / HTTP/1.1" 200 3190
+Not Found: /style.css
+"GET /style.css HTTP/1.1" 404 3637
+"GET /spinar/ HTTP/1.1" 200 3556
+Not Found: /spinar/style.css
+"GET /spinar/style.css HTTP/1.1" 404 3658
+"GET / HTTP/1.1" 200 3190
+Not Found: /style.css
+"GET /style.css HTTP/1.1" 404 3637
+"GET / HTTP/1.1" 200 3252
+Not Found: /style.css
+"GET /style.css HTTP/1.1" 404 3637
+"GET / HTTP/1.1" 200 3252
+Not Found: /style.css
+"GET /style.css HTTP/1.1" 404 3637
+"GET /transients/ HTTP/1.1" 200 8193
+Not Found: /transients/style.css
+"GET /transients/style.css HTTP/1.1" 404 3670
+"GET / HTTP/1.1" 200 3273
+Not Found: /style.css
+"GET /style.css HTTP/1.1" 404 3637
+"GET /statistic/ HTTP/1.1" 200 4685
+Not Found: /statistic/style.css
+"GET /statistic/style.css HTTP/1.1" 404 3667
+"GET / HTTP/1.1" 200 3276
+Not Found: /style.css
+"GET /style.css HTTP/1.1" 404 3637
+"GET /transients/ HTTP/1.1" 200 8217
+Not Found: /transients/style.css
+"GET /transients/style.css HTTP/1.1" 404 3670
+"GET /transients/ HTTP/1.1" 200 8217
+Not Found: /transients/style.css
+"GET /transients/style.css HTTP/1.1" 404 3670
+"GET / HTTP/1.1" 200 3276
+Not Found: /style.css
+"GET /style.css HTTP/1.1" 404 3637
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 3276
+Not Found: /style.css
+"GET /style.css HTTP/1.1" 404 3637
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3643
+"GET /transients/ HTTP/1.1" 200 8217
+Not Found: /transients/style.css
+"GET /transients/style.css HTTP/1.1" 404 3670
+"GET /transient/4/ HTTP/1.1" 200 4439
+Not Found: /transient/4/style.css
+"GET /transient/4/style.css HTTP/1.1" 404 3673
+"GET /transient/12/ HTTP/1.1" 200 4449
+Not Found: /transient/12/style.css
+"GET /transient/12/style.css HTTP/1.1" 404 3676
+"GET /transient/13/ HTTP/1.1" 200 4447
+Not Found: /transient/13/style.css
+"GET /transient/13/style.css HTTP/1.1" 404 3676
+"GET /edit/ HTTP/1.1" 200 5678
+Not Found: /edit/style.css
+"GET /edit/style.css HTTP/1.1" 404 3652
+"GET /statistic/ HTTP/1.1" 200 4685
+Not Found: /statistic/style.css
+"GET /statistic/style.css HTTP/1.1" 404 3667
+"GET /send/ HTTP/1.1" 200 4036
+Not Found: /send/style.css
+"GET /send/style.css HTTP/1.1" 404 3652
+"GET /spinar/ HTTP/1.1" 200 3642
+Not Found: /spinar/style.css
+"GET /spinar/style.css HTTP/1.1" 404 3658
+"POST /spinar/ HTTP/1.1" 200 78998
+Not Found: /spinar/style.css
+"GET /spinar/style.css HTTP/1.1" 404 3658
+"GET /spinar/ HTTP/1.1" 200 3642
+"POST /spinar/ HTTP/1.1" 200 90787
+Not Found: /spinar/style.css
+"GET /spinar/style.css HTTP/1.1" 404 3658
+Not Found: /transients/style.css
+"GET /transients/style.css HTTP/1.1" 404 3670
+Not Found: /transients/style.css
+"GET /transients/style.css HTTP/1.1" 404 3670
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 3276
+Not Found: /style.css
+"GET /style.css HTTP/1.1" 404 3637
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3643
+"GET /transients/ HTTP/1.1" 200 8217
+Not Found: /transients/style.css
+"GET /transients/style.css HTTP/1.1" 404 3670
+"GET /edit/ HTTP/1.1" 200 5678
+Not Found: /edit/style.css
+"GET /edit/style.css HTTP/1.1" 404 3652
+"GET /statistic/ HTTP/1.1" 200 4685
+Not Found: /statistic/style.css
+"GET /statistic/style.css HTTP/1.1" 404 3667
+"GET / HTTP/1.1" 200 3276
+Not Found: /style.css
+"GET /style.css HTTP/1.1" 404 3637
+"GET / HTTP/1.1" 200 3276
+Not Found: /style.css
+"GET /style.css HTTP/1.1" 404 3637
+"GET /send/ HTTP/1.1" 200 4036
+Not Found: /send/style.css
+"GET /send/style.css HTTP/1.1" 404 3652
+"GET /spinar/ HTTP/1.1" 200 3642
+Not Found: /spinar/style.css
+"GET /spinar/style.css HTTP/1.1" 404 3658
+"POST /spinar/ HTTP/1.1" 200 91077
+Not Found: /spinar/style.css
+"GET /spinar/style.css HTTP/1.1" 404 3658
+"GET / HTTP/1.1" 200 3276
+Not Found: /style.css
+"GET /style.css HTTP/1.1" 404 3637

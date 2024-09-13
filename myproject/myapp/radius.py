@@ -51,23 +51,6 @@ def counting (m, alpham, ao):
         taus.append(tau)
         Ls.append(Lo)
         aes.append(L1)
-        data.append([tau, math.log10(L)])
-    fig, ax = plt.subplots(2,2)
-    #fig, ax = plt.subplots(1,1) 
-    # Create a figure containing a single axes.
-    ax[0, 0].plot(taus, xs)  # Plot some data on the axes.
-    ax[0, 1].plot(taus, phis)
-    ax[1, 0].plot(taus, aes)
-    ax[1, 1].plot(taus, Ls)
-    ax[0, 0].set_xscale('log')
-    ax[0, 1].set_xscale('log')
-    ax[1, 0].set_xscale('log')
-    ax[1, 1].set_xscale('log')
-    ax[0, 0].set_yscale('log')
-    ax[0, 1].set_yscale('log')
-    ax[1, 0].set_yscale('log')
-    ax[1, 1].set_yscale('log')
-    #fig.savefig(name)
-    #plt.show()
+        data.append([round (tau, 2), round (math.log10(L), 2)])
     return data
 
