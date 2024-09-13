@@ -23,9 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-iw@i)7lr-8c$4jq*f*iwh9m!frj3+)v0chw3&g_!gxyftv)dre'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['astronomer.pythonanywhere.com',]
 
 
 # Application definition
@@ -73,12 +75,19 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
+import os
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+'default': {
+'ENGINE': 'django.db.backends.mysql',
+'NAME': 'astronomer$default',
+'USER': 'astronomer',
+'PASSWORD': os.getenv('MYSQL_PASSWORD'),
+'HOST': 'astronomer.mysql.pythonanywhere-services.com',
+'OPTIONS': {
+'init_command': "SET NAMES 'utf8mb4'; SET sql_mode='STRICT_TRANS_TABLES'",
+'charset': 'utf8mb4',
+},
+}
 }
 
 
@@ -150,4 +159,4 @@ LOGGING = {
 RECIPIENTS_EMAIL = ['chasovnikov.ar17@physics.msu.ru']   # замените на свою почту
 DEFAULT_FROM_EMAIL = 'chasovnikov.ar17@physics.msu.ru'  # замените на свою почту
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
+STATIC_ROOT = BASE_DIR / 'static/'
